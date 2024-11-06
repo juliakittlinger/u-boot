@@ -968,6 +968,7 @@ config SYS_FSL_QMAN_V3
 	depends on SYS_DPAA_QBMAN
 
 config TSEC_ENET
+	depends on DM && OF_CONTROL
 	select PHYLIB
 	bool "Enable Three-Speed Ethernet Controller"
 	help
