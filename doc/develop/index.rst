@@ -54,6 +54,7 @@ Implementation
    spl
    falcon
    uefi/index
+   lancom-upx
    vbe
    version
 
