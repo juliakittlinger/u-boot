@@ -1031,6 +1031,7 @@ config CHROMEOS_VBOOT
 
 config SYS_RAMBOOT
 	bool
+	default y  # FIXME
 
 config RAMBOOT_PBL
 	bool "Freescale PBL(pre-boot loader) image format support"
