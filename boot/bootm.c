@@ -1055,7 +1055,6 @@ int bootm_run_states(struct bootm_info *bmi, int states)
 
 	/* Load the OS */
 	if (!ret && (states & BOOTM_STATE_LOADOS)) {
-		iflag = bootm_disable_interrupts();
 		ret = bootm_load_os(images, 0);
 		if (ret && ret != BOOTM_ERR_OVERLAP)
 			goto err;
@@ -1083,6 +1082,8 @@ int bootm_run_states(struct bootm_info *bmi, int states)
 		ret = boot_relocate_fdt(&images->ft_addr, &images->ft_len);
 	}
 #endif
+
+	iflag = bootm_disable_interrupts();
 
 	/* From now on, we need the OS boot function */
 	if (ret)
