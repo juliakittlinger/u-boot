@@ -1,0 +1,18 @@
+if TARGET_LANCOM_NWAPP2
+
+config SYS_BOARD
+	default "nwapp2"
+
+config SYS_VENDOR
+	default "lancom"
+
+config SYS_CONFIG_NAME
+	default "lancom_nwapp2"
+
+config LANCOM_UPX_BOARD
+	default "NWAPP2"
+
+config LANCOM_UPX_VERSION
+	default "10.0.0"
+
+endif
